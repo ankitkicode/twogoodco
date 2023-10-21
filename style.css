@@ -1,0 +1,450 @@
+@font-face{
+    font-family: helv;
+    src: url(./HelveticaNowText-Regular.ttf);
+}
+@font-face{
+    font-family: futura;
+    src: url(./Futura-Bold.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color: #F7F7F7;
+}
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 0 1vw;
+    padding-top: 18vh;
+    background-color: #F7F7F7;
+}
+#page1 h1{
+    font-family: futura;
+    font-size: 15vw;
+    line-height: 13vw;
+    letter-spacing: -8px;
+    text-align: center;
+}
+#video-con{
+    height: 100vh;
+    width: 100%;
+    background-color: #F7F7F7;
+    margin-top: 1vw;
+}
+#video-con video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#video-con #play{
+    padding: 3vw 2.1vw;
+    font-size: 1.5vw;
+    background-color: rgb(255, 254, 254);
+    /* mix-blend-mode: difference; */
+    color: rgb(3, 3, 3);
+    text-transform: uppercase;
+    font-family: futura;
+    position: fixed;
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0;
+    pointer-events: none;
+}
+*::selection{
+    color: white;
+    background-color: black;
+}
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw 1vw;
+}
+#page2 .elem{
+    height: 100%;
+    width: 31%;
+    /* background-color: red; */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page2 .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.2;
+}
+#page2 .elem .dets{
+    position: absolute;
+    height: 50px;
+    border-radius: 40px;
+    width: 85%;
+    background-color: #C3D8C5;
+    transition: all ease .3s;
+    z-index: 9;
+    transform: translate(-0,0);
+    top: 50%;
+    overflow: hidden;
+    
+}
+#page2 .elem #dets1{
+    background-color: #C3D8C5;
+}
+#page2 .elem #dets2{
+    background-color: #F5DFCF;
+}
+#page2 .elem #dets3{
+    background-color: #ffffff;
+}
+.shop{
+    height: 50px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.3vw;
+}
+.shop h1,h3{
+    font-size: 15px;
+}
+.shop h3{
+    font-weight: 100;
+}
+.gola{
+    height: 11px;
+    width: 11px;
+    background-color: black;
+    border-radius: 50%;
+    /* margin-left: 100px; */
+}
+.item{
+    height: 250px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+}
+.item .lefti{
+    height: 100%;
+    width: 50%;
+    /* background-color: royalblue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+.item .lefti h5,.item .righti h5{
+    font-size: 13px;
+    position: absolute;
+    bottom: 25%;
+    font-weight: 600;
+    color: rgb(63, 63, 63);
+    text-align: center;
+}
+#page2 .elem .dets .item .lefti img,#page2 .elem .dets .item .righti img{
+    height: 100%;
+    scale: .6;
+    margin-top: -50px;
+}
+.item .righti{
+    height: 100%;
+    width: 50%;
+    /* background-color: royalblue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+#page2 .elem .dets:hover{
+    height: 250px;
+}
+
+#page3{
+    min-height: 120vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+#page3 .child{
+    height: 54vh;
+    width: 38vw;
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.child img{
+    height: 100%;
+}
+#cursor{
+    height: 210px;
+    width: 210px;
+    background-color: rgb(247, 215, 250);
+    border-radius: 50%;
+    position: fixed;
+    /* z-index: 99; */
+    transform: translate(-50%,-50%) scale(0);
+    pointer-events: none;
+}
+#nav {
+    /* height: 100px; */
+    width: 100%;
+    /* background-color: burlywood; */
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+#nav #nav-part2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+#links {
+    padding: 10px;
+}
+
+#nav-part1 {
+    /* background-color: RED; */
+    height: 82px;
+    overflow: hidden;
+}
+
+#nav-part1 svg {
+    display: block;
+}
+
+#nav-part2 #links a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #555555;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0 20px;
+}
+
+#icons {
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #F7F7F7;
+}
+
+#nav-part2 #icons i {
+    font-size: 18px;
+    margin: 0 20px;
+    font-weight: 100;
+}
+#page4{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#page4 h1{
+    font-size: 6vw;
+    text-align: center;
+    line-height: 1;
+}
+#page4 button{
+    margin: 2.5vw;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    padding: 14px 35px;
+    border-radius: 50px;
+    transition: all ease .3s;
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#page4 button:hover{
+    color: rgb(134, 134, 134);
+}
+@media (max-width:600px) {
+    #page4{
+        height: 60vh;
+        width: 100%;
+        /* background-color: pink; */
+
+    }
+    #page4 h1{
+        margin-top: 30vh;
+        font-size: 8vw;
+        text-align: center;
+        line-height: 1;
+        /* background-color: red; */
+    }
+    #page4 button{
+        margin: 10vw 0;
+        
+    }
+    #page4 h3{
+        font-size: 18px;
+    }
+    #nav {
+        /* height: 100px; */
+        width: 100%;
+        /* background-color: burlywood; */
+        position: fixed;
+        z-index: 99;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+    #nav #nav-part2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    #links {
+        padding: 10px;
+        display: none;
+    }
+
+    #nav-part1 {
+        /* background-color: RED; */
+        height: 67px;
+        overflow: hidden;
+    }
+
+    #nav-part1 svg {
+        display: block;
+        height: 67px;
+        width: 80px;
+    }
+    #nav #twogoodlogo{
+        height: 40px;
+        margin-left: -20px;
+        /* margin-top: -3px; */
+        /* background-color: red; */
+    }
+
+    #icons {
+        padding: 7px;
+        border-radius: 50px;
+        background-color: #F7F7F7;
+        /* background-color: red; */
+    }
+
+    #nav-part2 #icons i {
+        font-size: 25px;
+        margin: 0 10px;
+        font-weight: 100;
+    }
+
+    #page1 {
+        /* background-color: red; */
+        min-height: 70vh;
+        width: 100%;
+        padding: 0 3vw;
+        padding-top: 25vh;
+
+    }
+
+    #page1 h1 {
+        font-size: 15.5vw;
+        letter-spacing: -3px;
+    }
+
+    #video-container {
+        height: 25vh;
+        margin-top: 3vw;
+    }
+
+    #video-container #play {
+        padding: 9.5vw 7.2vw;
+        font-size: 4.5vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        opacity: 1;
+        scale: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    #page2 {
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 5vw 3vw;
+        flex-direction: column;
+        justify-content: space-between;
+        /* background-color: red; */
+    }
+
+    #page2 .elem {
+        height: 100vh;
+        width: 100%;
+        /* background-color: red; */
+        overflow: hidden;
+        margin-bottom: 3vw;
+    }
+
+    #page2 .elem .dets {
+        height: 40px;
+        border-radius: 50px;
+        width: 70%;
+        position: absolute;
+        z-index: 9;
+        background-color: rgb(229, 156, 186);
+
+    }
+
+    #page3 {
+        height: 80vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .child {
+        height: 0vh;
+        width: 40vw;
+        /* background-color: red; */
+        /* border: 2px solid #000; */
+        position: relative;
+        padding: 20vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .child img {
+        height: 60%;
+    }
+
+}
